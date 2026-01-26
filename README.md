@@ -90,7 +90,7 @@
 ---
 <br>
 
-![Snake animation](https://github.com/hammadrehmani/hammadrehmani/blob/output/snake.svg)
+![Snake animation](https://github.com/hammadrehman/hammadrehmani/blob/output/snake.svg)
 
 <br>
 
