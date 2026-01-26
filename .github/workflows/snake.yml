@@ -1,14 +1,9 @@
 name: Generate snake animation
 
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
-  workflow_dispatch:
-
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "* */12 * * *" # execute every 12 hours
+  workflow_dispatch: # allows you to click "Run workflow" manually
 
 jobs:
   generate:
@@ -22,43 +17,16 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: dist/snake.svg?palette=github-dark
-name: Generate snake animation
+          # EXPLANATION OF COLORS:
+          # color_snake: White (to stand out against the purple)
+          # color_dots: 5 colors from Empty -> Your Main Color (#B3A7FF)
+          # 1. #161b22 (Empty/Background)
+          # 2. #3a2a5e (Dark Purple)
+          # 3. #62539f (Medium Purple)
+          # 4. #8b7cd0 (Light Purple)
+          # 5. #B3A7FF (YOUR MAIN COLOR - Highest Activity)
+          outputs: dist/snake.svg?palette=github-dark&color_snake=white&color_dots=#161b22,#3a2a5e,#62539f,#8b7cd0,#B3A7FF
 
-on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
-  workflow_dispatch:
-
-  push:
-    branches:
-      - main
-
-jobs:
-  generate:
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-
-    steps:
-      - name: generate snake.svg
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          # I changed the line below to use Purple colors instead of the default Green.
-          # color_snake: The moving line (currently orange)
-          # color_dots: The 5 box colors from empty to full (currently dark to purple)
-          outputs: dist/snake.svg?palette=github-dark&color_snake=orange&color_dots=#161b22,#4b2159,#7c3aed,#a855f7,#d8b4fe
-
-      - name: push snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: push snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
