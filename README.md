@@ -76,7 +76,7 @@
 
 <div align="center" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(59, 130, 246, 0.1)); padding: 20px; border-radius: 15px; margin: 20px 0;"> 
   <img src="https://github-readme-stats.vercel.app/api?username=hammadrehmani&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=B3A7FF&icon_color=B3A7FF&text_color=C9D1D9&ring_color=B3A7FF&border_radius=15" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=hammadrehmani&theme=tokyonight&hide_border=true&background=0D1117&stroke=B3A7FF&ring=B3A7FF&fire=B3A7FF&currStreakLabel=B3A7FF&border_radius=15" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=hammadrehmani&theme=tokyonight&hide_border=true&background=0D1117&stroke=B3A7FF&ring=B3A7FF&fire=B3A7FF&text_color=C9D1D9&currStreakLabel=B3A7FF&border_radius=15" width="48%" />
 </div>
 <div align="center" style="margin: 20px 0;"> 
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hammadrehmani&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=B3A7FF&text_color=C9D1D9&border_radius=15" width="48%" />
